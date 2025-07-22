@@ -1,0 +1,13 @@
+这是一个示例文件夹！
+
+请将您的图片文件放在这个文件夹中，例如：
+- hello-world/cover.jpg
+- hello-world/screenshot.png
+- hello-world/diagram.svg
+
+然后在markdown文章中这样引用：
+![](cover.jpg)
+![](screenshot.png)
+![](diagram.svg)
+
+注意：使用post_asset_folder功能时，图片路径是相对于文章同名文件夹的相对路径！ 
