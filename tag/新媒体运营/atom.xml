@@ -1,26 +1,18 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>贡献者：追云之帆</title>
-        <link>https://landayunying.github.io</link>
-        <description></description>
-        <language>en</language>
-        <pubDate>Tue, 22 Jul 2025 20:00:00 +0800</pubDate>
-        <lastBuildDate>Tue, 22 Jul 2025 20:00:00 +0800</lastBuildDate>
-        <category>纳新</category>
-        <category>军训</category>
-        <category>新媒体运营</category>
-        <category>视频制作</category>
-        <item>
-            <guid isPermalink="true">https://landayunying.github.io/2025/07/22/hello-world/</guid>
-            <title>📸 青春记录者，军训故事创作者 —— 萃英在线运营部火热纳新！</title>
-            <link>https://landayunying.github.io/2025/07/22/hello-world/</link>
-            <category>纳新</category>
-            <category>军训</category>
-            <category>新媒体运营</category>
-            <category>视频制作</category>
-            <pubDate>Tue, 22 Jul 2025 20:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;用镜头定格青春用文字镌刻成长&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用镜头定格青春用文字镌刻成长&#34;&gt;#&lt;/a&gt; 🎬 用镜头定格青春，用文字镌刻成长&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://landayunying.github.io</id>
+    <title>贡献者：追云之帆 • Posts by &#34;新媒体运营&#34; tag</title>
+    <link href="https://landayunying.github.io" />
+    <updated>2025-07-22T12:00:00.000Z</updated>
+    <category term="纳新" />
+    <category term="军训" />
+    <category term="新媒体运营" />
+    <category term="视频制作" />
+    <entry>
+        <id>https://landayunying.github.io/2025/07/22/hello-world/</id>
+        <title>📸 青春记录者，军训故事创作者 —— 萃英在线运营部火热纳新！</title>
+        <link rel="alternate" href="https://landayunying.github.io/2025/07/22/hello-world/"/>
+        <content type="html">&lt;h1 id=&#34;用镜头定格青春用文字镌刻成长&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用镜头定格青春用文字镌刻成长&#34;&gt;#&lt;/a&gt; 🎬 用镜头定格青春，用文字镌刻成长&lt;/h1&gt;
 &lt;p&gt;在兰州大学军训的火热时光里，&lt;strong&gt;萃英在线运营部&lt;/strong&gt; 将成为记录青春最重要的力量！我们肩负着为 &lt;strong&gt;抖音、QQ、微博及中国大学生在线&lt;/strong&gt; 等官方账号赋能的神圣使命。&lt;/p&gt;
 &lt;p&gt;通过精心的视频制作、生动的图片展示与走心的文案撰写，我们将全方位捕捉军训中的每一个精彩瞬间，让这段难忘的时光永远闪闪发光！&lt;/p&gt;
 &lt;hr&gt;
@@ -80,7 +72,11 @@
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;发布时间：2025 年 7 月 22 日&lt;/em&gt;&lt;br&gt;
 &lt;em&gt;发布单位：兰州大学萃英在线运营部&lt;/em&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="纳新" />
+        <category term="军训" />
+        <category term="新媒体运营" />
+        <category term="视频制作" />
+        <updated>2025-07-22T12:00:00.000Z</updated>
+    </entry>
+</feed>

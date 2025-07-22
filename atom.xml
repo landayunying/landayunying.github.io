@@ -3,26 +3,80 @@
     <id>https://landayunying.github.io</id>
     <title>贡献者：追云之帆</title>
     <link href="https://landayunying.github.io" />
-    <updated>2025-07-22T07:31:30.578Z</updated>
+    <updated>2025-07-22T12:00:00.000Z</updated>
+    <category term="纳新" />
+    <category term="军训" />
+    <category term="新媒体运营" />
+    <category term="视频制作" />
     <entry>
         <id>https://landayunying.github.io/2025/07/22/hello-world/</id>
-        <title>Hello World</title>
+        <title>📸 青春记录者，军训故事创作者 —— 萃英在线运营部火热纳新！</title>
         <link rel="alternate" href="https://landayunying.github.io/2025/07/22/hello-world/"/>
-        <content type="html">&lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;用镜头定格青春用文字镌刻成长&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用镜头定格青春用文字镌刻成长&#34;&gt;#&lt;/a&gt; 🎬 用镜头定格青春，用文字镌刻成长&lt;/h1&gt;
+&lt;p&gt;在兰州大学军训的火热时光里，&lt;strong&gt;萃英在线运营部&lt;/strong&gt; 将成为记录青春最重要的力量！我们肩负着为 &lt;strong&gt;抖音、QQ、微博及中国大学生在线&lt;/strong&gt; 等官方账号赋能的神圣使命。&lt;/p&gt;
+&lt;p&gt;通过精心的视频制作、生动的图片展示与走心的文案撰写，我们将全方位捕捉军训中的每一个精彩瞬间，让这段难忘的时光永远闪闪发光！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;我们在寻找什么样的你&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#我们在寻找什么样的你&#34;&gt;#&lt;/a&gt; 🌟 我们在寻找什么样的你？&lt;/h2&gt;
+&lt;p&gt;无论是大型活动的全景记录，还是充满个性的创意表达，我们都&lt;strong&gt;热烈欢迎你加入&lt;/strong&gt; ——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🎥 &lt;strong&gt;用灵感打造独特视频&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;✍️ &lt;strong&gt;用巧思撰写趣味文案&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;📷 &lt;strong&gt;用镜头捕捉青春瞬间&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;让这段军训时光留下&lt;strong&gt;专属于你的独家记忆&lt;/strong&gt;！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;在这里你能收获什么&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在这里你能收获什么&#34;&gt;#&lt;/a&gt; 💡 在这里，你能收获什么？&lt;/h2&gt;
+&lt;h3 id=&#34;解锁硬核技能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解锁硬核技能&#34;&gt;#&lt;/a&gt; 🎯 &lt;strong&gt;解锁硬核技能&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;视频拍摄&lt;/strong&gt;：掌握运镜技巧，让画面更有张力&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片构图&lt;/strong&gt;：探索光影奥秘，拍出大片质感&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;剪辑软件&lt;/strong&gt;：灵活运用各种工具，让创意落地&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文案创作&lt;/strong&gt;：学会共情心法，写出打动人心的文字&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;手把手教学&lt;/strong&gt;：资深学长学姐全程指导，助你快速成长&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;释放无限创意&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#释放无限创意&#34;&gt;#&lt;/a&gt; 🚀 &lt;strong&gt;释放无限创意&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提供&lt;strong&gt;广阔平台&lt;/strong&gt;，让你的奇思妙想落地生根&lt;/li&gt;
+&lt;li&gt;每一个独特的作品都有机会&lt;strong&gt;被万千目光看见&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;在官方账号上展示你的才华与创意&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;收获真挚情谊&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#收获真挚情谊&#34;&gt;#&lt;/a&gt; 🤝 &lt;strong&gt;收获真挚情谊&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;与一群&lt;strong&gt;热爱新媒体、怀揣热忱&lt;/strong&gt;的伙伴并肩作战&lt;/li&gt;
+&lt;li&gt;这份志同道合的友谊，将成为&lt;strong&gt;大学生活中最温暖的注脚&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;我们期待这样的你&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#我们期待这样的你&#34;&gt;#&lt;/a&gt; 📋 我们期待这样的你&lt;/h2&gt;
+&lt;p&gt;如果你符合以下条件，我们非常期待你的加入：&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;对官号运营满怀热忱&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;对视频剪辑、照片拍摄、文案写作有独到想法&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;愿意主动汲取新知识&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;兼具责任心与团队协作精神&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;加入我们一起创造精彩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#加入我们一起创造精彩&#34;&gt;#&lt;/a&gt; 🎊 加入我们，一起创造精彩&lt;/h2&gt;
+&lt;p&gt;在萃英在线运营部，你将：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🎬 &lt;strong&gt;记录历史时刻&lt;/strong&gt;：成为兰大军训的官方记录者&lt;/li&gt;
+&lt;li&gt;📱 &lt;strong&gt;运营头部账号&lt;/strong&gt;：在知名平台展示你的作品&lt;/li&gt;
+&lt;li&gt;🎓 &lt;strong&gt;提升专业技能&lt;/strong&gt;：获得实战经验和专业指导&lt;/li&gt;
+&lt;li&gt;🌈 &lt;strong&gt;实现创意梦想&lt;/strong&gt;：让你的想法影响更多人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💫 &lt;strong&gt;让我们一起用镜头定格青春，用文字镌刻成长，让军训的故事被更多人听见、看见！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;联系我们&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#联系我们&#34;&gt;#&lt;/a&gt; 📞 联系我们&lt;/h2&gt;
+&lt;p&gt;🔥 &lt;strong&gt;心动不如行动，快来加入我们吧！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💬 纳新咨询群：750198650&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;期待在萃英在线运营部与你相遇，一起书写属于我们的青春故事！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;发布时间：2025 年 7 月 22 日&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;发布单位：兰州大学萃英在线运营部&lt;/em&gt;&lt;/p&gt;
 </content>
-        <updated>2025-07-22T07:31:30.578Z</updated>
+        <category term="纳新" />
+        <category term="军训" />
+        <category term="新媒体运营" />
+        <category term="视频制作" />
+        <updated>2025-07-22T12:00:00.000Z</updated>
     </entry>
 </feed>
