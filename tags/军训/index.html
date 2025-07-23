@@ -88,12 +88,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/ED331C407DADE2257EA9F2FE67B9E18E.jpg"></li>
-          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/D0B81E41858FA58E9875116CD0DA86FE.jpg"></li>
-          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/28EE2A74BE4D80C5C0E441346B75CDC3.jpg"></li>
-          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/AD09A81DA7D59799F54166E0D8563449.jpg"></li>
-          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/2AE5F069536B23A53F714B0340340B50.jpg"></li>
-          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/51FAE7B746AA1FC07CF33817A0EDF1E5.jpg"></li>
+          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/CE4EBBE2D63FCEF9296C28F99474CABF.jpg"></li>
+          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/131AC0C8C603AEF4409BD607726B258E.jpg"></li>
+          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/2DA88D43DB86AC14A69827E7F00BAF5F.jpg"></li>
+          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/D2C58DBB4B0443E9B34D9FFC26C6BE77.jpg"></li>
+          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/87376374672E4F8DF5B4F64E6910ED3A.jpg"></li>
+          <li class="item" data-background-image="https://landayunying.github.io/images/zhuye/628D621A8FB12E1B3FA002D3B8602B7A.jpg"></li>
         </ul>
       </div>
     </header>
@@ -160,7 +160,7 @@
   <img class="image" itemprop="image" alt="兰州大学萃英在线"
       data-src="/images/avatar.jpg">
   <p class="name" itemprop="name">兰州大学萃英在线</p>
-  <div class="description" itemprop="description">普通人间废土，天虽老与小狗🤞</div>
+  <div class="description" itemprop="description">笔头千字，胸中万卷。</div>
 </div>
 
 <nav class="state">
@@ -206,6 +206,24 @@
 
 
 </ul>
+
+<!-- 动态提示卡 -->
+<div class="dynamic-tip-card">
+  <div class="tip-header">
+    <i class="ic i-lightbulb tip-icon"></i>
+    <span class="tip-label">今日提示</span>
+    <div class="tip-refresh" onclick="window.DynamicCard && window.DynamicCard.refreshTip()">
+      <i class="ic i-refresh"></i>
+    </div>
+  </div>
+  <div class="tip-content">
+    <p class="tip-text">正在加载提示内容...</p>
+  </div>
+  <div class="tip-footer">
+    <span class="tip-category">学习提醒</span>
+    <span class="tip-time"></span>
+  </div>
+</div>
 
       </div>
     </div>
@@ -302,6 +320,193 @@
 
 
 
+
+<!-- Live2D 看板娘 (简化版本) -->
+<script src="/live2d-widget/dist/autoload.js"></script>
+
+<!-- 自定义消息系统 + 小猫娘增强脚本 -->
+<script>
+  // 创建我们自己的消息显示系统
+  function createCustomMessageSystem() {
+    // 创建消息容器
+    const messageContainer = document.createElement('div');
+    messageContainer.id = 'custom-waifu-message';
+    messageContainer.style.cssText = `
+      position: fixed;
+      bottom: 150px;
+      left: 280px;
+      width: 250px;
+      padding: 10px 15px;
+      background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 218, 185, 0.9));
+      border: 2px solid rgba(255, 105, 180, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-size: 14px;
+      color: #d84315;
+      text-align: center;
+      z-index: 6;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease-in-out;
+      pointer-events: auto;
+      cursor: pointer;
+      font-family: "Microsoft YaHei", sans-serif;
+      line-height: 1.4;
+    `;
+    document.body.appendChild(messageContainer);
+    
+         // 自定义消息显示函数
+     window.customShowMessage = function(text, duration) {
+       console.log('自定义消息系统显示:', text);
+       
+       messageContainer.innerHTML = text;
+       messageContainer.style.opacity = '1';
+       messageContainer.style.transform = 'translateY(0)';
+       
+       setTimeout(() => {
+         messageContainer.style.opacity = '0';
+         messageContainer.style.transform = 'translateY(10px)';
+       }, duration || 4000);
+     };
+     
+     // 添加点击事件
+     messageContainer.addEventListener('click', function() {
+       console.log('消息框被点击了！');
+       
+       // 点击后的效果
+       const clickMessages = [
+         '你点击了我的消息框！ (｡♥‿♥｡)',
+         '哇！你发现了隐藏功能！ ✨',
+         '点击消息框可以获得惊喜哦~ 🎉',
+         '你很棒！继续探索吧！ 🌟',
+         '消息框也可以互动呢~ (≧∀≦)',
+         '感谢你的点击！ 💕',
+         '你找到了彩蛋功能！ 🥚'
+       ];
+       
+       const randomMsg = clickMessages[Math.floor(Math.random() * clickMessages.length)];
+       
+       // 重新显示新消息
+       if (typeof window.showMessage === 'function') {
+         window.showMessage(randomMsg, 3000);
+       } else {
+         window.customShowMessage(randomMsg, 3000);
+       }
+       
+       // 添加点击动画效果
+       messageContainer.style.transform = 'translateY(0) scale(0.95)';
+       setTimeout(() => {
+         messageContainer.style.transform = 'translateY(0) scale(1)';
+       }, 150);
+     });
+     
+     // 添加悬停效果
+     messageContainer.addEventListener('mouseenter', function() {
+       messageContainer.style.boxShadow = '0 6px 20px rgba(255, 105, 180, 0.3)';
+       messageContainer.style.transform = 'translateY(-2px)';
+     });
+     
+     messageContainer.addEventListener('mouseleave', function() {
+       messageContainer.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+       messageContainer.style.transform = 'translateY(0)';
+     });
+    
+    return messageContainer;
+  }
+  
+  // 等待Live2D加载并创建消息系统
+  setTimeout(function() {
+    console.log('初始化自定义消息系统...');
+    
+    // 创建自定义消息系统
+    createCustomMessageSystem();
+    
+    // 检查小猫娘是否存在
+    const waifuElement = document.getElementById('waifu');
+    console.log('小猫娘元素检测:', waifuElement ? '✅ 找到了！' : '❌ 未找到');
+    
+    // 尝试使用原生showMessage或我们的自定义系统
+    function showWaifuMessage(text, duration) {
+      if (typeof window.showMessage === 'function') {
+        console.log('使用Live2D原生消息系统');
+        window.showMessage(text, duration);
+      } else {
+        console.log('使用自定义消息系统');
+        window.customShowMessage(text, duration);
+      }
+    }
+    
+    // 强制显示欢迎消息
+    setTimeout(() => {
+      showWaifuMessage('你好呀！我是小猫娘助手~ ฅ(＾◡＾)ฅ', 6000);
+      console.log('✅ 欢迎消息已发送！');
+      
+      // 音乐提示消息
+      setTimeout(() => {
+        showWaifuMessage('右下角可以选择播放音乐哦~ ♪(´▽｀)', 5000);
+        console.log('✅ 音乐提示消息已发送！');
+      }, 7000);
+      
+    }, 2000);
+    
+    // 定期随机提示
+    setInterval(() => {
+      if (Math.random() < 0.15) { // 15%概率
+        const musicMessages = [
+          '右下角可以选择播放音乐哦~',
+          '音乐配上阅读，是最棒的享受！',
+          '别忘了试试播放按钮哦~',
+          '侧边栏的音乐播放器等你来体验！',
+          '点击我可以听到更多话哦~',
+          '今天想听什么类型的音乐呢？',
+          '要不要听听音乐放松一下？'
+        ];
+        const randomMsg = musicMessages[Math.floor(Math.random() * musicMessages.length)];
+        showWaifuMessage(randomMsg, 4000);
+        console.log('🎵 定期音乐提示:', randomMsg);
+      }
+    }, 25000);
+    
+    // 为小猫娘添加点击事件（支持双重消息系统）
+    setTimeout(() => {
+      const waifuEl = document.getElementById('waifu');
+      if (waifuEl) {
+        waifuEl.addEventListener('click', function() {
+          const clickMessages = [
+            '你想和我玩吗？ (｡♥‿♥｡)',
+            '哇，你戳到我了！ ヾ(≧∪≦*)ﾉ〃',
+            '哼！别戳我！ (｡•́︿•̀｡)',
+            '右下角可以选择播放音乐哦~ ♪',
+            '试试看音乐播放器吧！',
+            '音乐会让阅读更有趣呢~',
+            '我是小猫娘助手，很高兴认识你！',
+            '这里有很多有趣的内容哦！',
+            '欢迎来到兰州大学萃英在线！',
+            '希望你能在这里找到有价值的知识！'
+          ];
+          const randomMsg = clickMessages[Math.floor(Math.random() * clickMessages.length)];
+          showWaifuMessage(randomMsg, 4000);
+          console.log('🖱️ 点击消息:', randomMsg);
+        });
+        console.log('✅ 小猫娘点击事件已绑定！');
+      } else {
+        console.log('❌ 小猫娘元素未找到，无法绑定点击事件');
+      }
+    }, 4000);
+    
+  }, 2000);
+  
+  // 手动测试消息的全局函数
+  window.testWaifuMessage = function() {
+    const testMsg = '这是测试消息！右下角可以选择播放音乐哦~ 🎵';
+    if (typeof window.showMessage === 'function') {
+      window.showMessage(testMsg, 5000);
+    } else if (typeof window.customShowMessage === 'function') {
+      window.customShowMessage(testMsg, 5000);
+    }
+    console.log('测试消息已发送:', testMsg);
+  };
+</script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-var CONFIG = {"version":"0.2.5","hostname":"https://landayunying.github.io","root":"/","statics":"/","favicon":{"normal":"images/favicon.ico","hidden":"images/failure.ico"},"darkmode":false,"auto_scroll":true,"js":{"valine":"gh/amehime/MiniValine@4.2.2-beta10/dist/MiniValine.min.js","chart":"npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js","copy_tex":"npm/katex@0.12.0/dist/contrib/copy-tex.min.js","fancybox":"combine/npm/jquery@3.5.1/dist/jquery.min.js,npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js,npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"},"css":{"valine":"css/comment.css","katex":"npm/katex@0.12.0/dist/katex.min.css","mermaid":"css/mermaid.css","fancybox":"combine/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"},"loader":{"start":true,"switch":true},"search":null,"valine":{"appId":null,"appKey":null,"placeholder":"ヽ(○´∀`)ﾉ♪","avatar":"mp","pageSize":10,"lang":"en","visitor":true,"NoRecordIP":false,"serverURLs":null,"powerMode":true,"tagMeta":{"visitor":"新朋友","master":"主人","friend":"小伙伴","investor":"金主粑粑"},"tagColor":{"master":"var(--color-orange)","friend":"var(--color-aqua)","investor":"var(--color-pink)"},"tagMember":{"master":null,"friend":null,"investor":null}},"quicklink":{"timeout":3000,"priority":true},"fireworks":["rgba(255,182,185,.9)","rgba(250,227,217,.9)","rgba(187,222,214,.9)","rgba(138,198,209,.9)"]};const getRndInteger = function (min, max) {
+var CONFIG = {"version":"0.2.5","hostname":"https://landayunying.github.io","root":"/","statics":"/","favicon":{"normal":"images/favicon.ico","hidden":"images/failure.ico"},"darkmode":false,"auto_scroll":true,"js":{"valine":"gh/amehime/MiniValine@4.2.2-beta10/dist/MiniValine.min.js","chart":"npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js","copy_tex":"npm/katex@0.12.0/dist/contrib/copy-tex.min.js","fancybox":"combine/npm/jquery@3.5.1/dist/jquery.min.js,npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js,npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"},"css":{"valine":"css/comment.css","katex":"npm/katex@0.12.0/dist/katex.min.css","mermaid":"css/mermaid.css","fancybox":"combine/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"},"loader":{"start":true,"switch":true},"search":null,"valine":{"appId":null,"appKey":null,"placeholder":"ヽ(○´∀`)ﾉ♪","avatar":"mp","pageSize":10,"lang":"en","visitor":true,"NoRecordIP":false,"serverURLs":null,"powerMode":true,"tagMeta":{"visitor":"新朋友","master":"主人","friend":"小伙伴","investor":"金主粑粑"},"tagColor":{"master":"var(--color-orange)","friend":"var(--color-aqua)","investor":"var(--color-pink)"},"tagMember":{"master":null,"friend":null,"investor":null}},"quicklink":{"timeout":3000,"priority":true},"audio":[{"title":"纯音乐精选","list":["https://music.163.com/#/playlist?id=2884035","https://music.163.com/#/playlist?id=336400013"]},{"title":"轻音乐舒缓","list":["https://music.163.com/#/playlist?id=797690","https://music.163.com/#/playlist?id=518776114"]}],"fireworks":["rgba(255,182,185,.9)","rgba(250,227,217,.9)","rgba(187,222,214,.9)","rgba(138,198,209,.9)"]};const getRndInteger = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -2280,6 +2280,17 @@ const siteRefresh = function (reload) {
   tabFormat()
 
   toolPlayer.player.load(LOCAL.audio || CONFIG.audio || {})
+  
+  // 自动播放音乐
+  setTimeout(function() {
+    if(toolPlayer.player && toolPlayer.player.fetch) {
+      toolPlayer.player.fetch().then(function() {
+        if(toolPlayer.player.playlist && toolPlayer.player.playlist.data.length > 0) {
+          toolPlayer.player.play()
+        }
+      })
+    }
+  }, 2000)
 
   Loader.hide()
 
@@ -2333,7 +2344,263 @@ const siteInit = function () {
 window.addEventListener('DOMContentLoaded', siteInit);
 
 console.log('%c Theme.Shoka v' + CONFIG.version + ' %c https://shoka.lostyu.me/ ', 'color: white; background: #e9546b; padding:5px 0;', 'padding:4px;border:1px solid #e9546b;')
-var canvasEl = document.createElement('canvas');
+/**
+ * 动态提示卡功能
+ */
+window.DynamicCard = {
+  // 提示内容数据库
+  tips: {
+    // 学习提醒
+    study: [
+      "学而时习之，不亦说乎？",
+      "今日事今日毕，明日更精彩！",
+      "知识改变命运，学习成就未来。",
+      "每天进步一点点，成功就在眼前。",
+      "书山有路勤为径，学海无涯苦作舟。",
+      "温故而知新，可以为师矣。",
+      "三人行，必有我师焉。",
+      "读万卷书，行万里路。",
+      "业精于勤，荒于嬉；行成于思，毁于随。",
+      "学习永远不晚，每一刻都是新的开始。"
+    ],
+    
+    // 生活感悟
+    life: [
+      "生活不止眼前的苟且，还有诗和远方。",
+      "做人如水，你高，我便退去，决不淹没你的优点。",
+      "心若向阳，无谓悲伤。",
+      "愿你走出半生，归来仍是少年。",
+      "人生如茶，静心以对。",
+      "慢慢来，谁还没有一个努力的过程。",
+      "星光不问赶路人，时光不负有心人。",
+      "愿你在最美的年华里，遇见最美的自己。",
+      "生活需要仪式感，哪怕是一杯热茶。",
+      "保持热爱，奔赴山海。"
+    ],
+    
+    // 网站功能
+    features: [
+      "点击右上角切换日/夜间主题哦！",
+      "使用搜索功能快速找到想要的内容。",
+      "文章支持分类和标签，方便浏览。",
+      "别忘了查看「作品」和「成员」页面！",
+      "可以通过RSS订阅最新文章。",
+      "网站支持移动端浏览，随时随地阅读。",
+      "左侧边栏可以快速导航到各个栏目。",
+      "支持键盘快捷键，提升浏览体验。",
+      "文章底部有相关推荐，不要错过。",
+      "欢迎分享有价值的内容给朋友们！"
+    ],
+    
+    // 兰大相关
+    lzu: [
+      "兰州大学，百年树人育英才！",
+      "萃英在线，记录青春岁月。",
+      "知行合一，德才兼备。",
+      "自强不息，独树一帜。",
+      "做有理想的兰大人！",
+      "传承兰大精神，书写青春华章。",
+      "在知识的海洋中尽情遨游。",
+      "兰大的每一天都值得被记录。",
+      "青春无悔，梦想前行。",
+      "愿你在兰大的时光充实而美好。"
+    ],
+    
+    // 技术分享
+    tech: [
+      "代码是诗，算法是美。",
+      "技术改变世界，创新驱动未来。",
+      "优秀的程序员写出人类能读懂的代码。",
+      "调试代码如侦探破案，需要耐心和智慧。",
+      "学会一门新技术，就是打开一扇新世界的门。",
+      "技术没有终点，只有不断的探索。",
+      "简单的设计往往是最好的设计。",
+      "不要重复造轮子，但要理解轮子是怎么转的。",
+      "技术服务于人，而不是人服务于技术。",
+      "保持好奇心，拥抱新技术。"
+    ]
+  },
+
+  // 当前提示信息
+  currentTip: null,
+  
+  // 初始化
+  init: function() {
+    console.log('动态提示卡初始化...');
+    this.loadRandomTip();
+    this.updateTime();
+    
+    // 每小时更新一次提示
+    setInterval(() => {
+      this.loadRandomTip();
+    }, 60 * 60 * 1000);
+    
+    // 每分钟更新时间
+    setInterval(() => {
+      this.updateTime();
+    }, 60 * 1000);
+  },
+  
+  // 加载随机提示
+  loadRandomTip: function() {
+    const categories = Object.keys(this.tips);
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    const categoryTips = this.tips[randomCategory];
+    const randomTip = categoryTips[Math.floor(Math.random() * categoryTips.length)];
+    
+    // 设置当前提示
+    this.currentTip = {
+      text: randomTip,
+      category: this.getCategoryDisplayName(randomCategory),
+      time: new Date()
+    };
+    
+    this.displayTip();
+  },
+  
+  // 显示提示
+  displayTip: function() {
+    const tipText = document.querySelector('.tip-text');
+    const tipCategory = document.querySelector('.tip-category');
+    const tipTime = document.querySelector('.tip-time');
+    
+    if (tipText && this.currentTip) {
+      // 添加加载动画
+      tipText.classList.add('loading');
+      
+      setTimeout(() => {
+        tipText.textContent = this.currentTip.text;
+        tipText.classList.remove('loading');
+        
+        if (tipCategory) {
+          tipCategory.textContent = this.currentTip.category;
+        }
+        
+        this.updateTime();
+      }, 300);
+    }
+  },
+  
+  // 获取分类显示名称
+  getCategoryDisplayName: function(category) {
+    const displayNames = {
+      study: '学习提醒',
+      life: '生活感悟', 
+      features: '网站功能',
+      lzu: '兰大精神',
+      tech: '技术分享'
+    };
+    return displayNames[category] || '随机内容';
+  },
+  
+  // 刷新提示
+  refreshTip: function() {
+    console.log('刷新动态提示...');
+    
+    // 旋转动画效果已通过CSS实现
+    const refreshBtn = document.querySelector('.tip-refresh');
+    if (refreshBtn) {
+      refreshBtn.style.pointerEvents = 'none';
+      setTimeout(() => {
+        refreshBtn.style.pointerEvents = 'auto';
+      }, 600);
+    }
+    
+    // 加载新提示
+    setTimeout(() => {
+      this.loadRandomTip();
+    }, 300);
+  },
+  
+  // 更新时间显示
+  updateTime: function() {
+    const tipTime = document.querySelector('.tip-time');
+    if (tipTime && this.currentTip) {
+      const now = new Date();
+      const diff = now - this.currentTip.time;
+      const minutes = Math.floor(diff / (1000 * 60));
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      
+      let timeText = '';
+      if (days > 0) {
+        timeText = `${days}天前`;
+      } else if (hours > 0) {
+        timeText = `${hours}小时前`;
+      } else if (minutes > 0) {
+        timeText = `${minutes}分钟前`;
+      } else {
+        timeText = '刚刚';
+      }
+      
+      tipTime.textContent = timeText;
+    }
+  },
+  
+  // 根据时间段获取合适的提示
+  getTimeBasedTip: function() {
+    const hour = new Date().getHours();
+    
+    if (hour >= 6 && hour < 9) {
+      // 早晨
+      return {
+        text: "早安！新的一天开始了，让我们充满活力地迎接挑战吧！",
+        category: "早安问候"
+      };
+    } else if (hour >= 9 && hour < 12) {
+      // 上午
+      return this.getRandomTipFromCategory('study');
+    } else if (hour >= 12 && hour < 14) {
+      // 午间
+      return {
+        text: "午间小憩，为下午的工作储备能量～",
+        category: "温馨提醒"
+      };
+    } else if (hour >= 14 && hour < 18) {
+      // 下午
+      return this.getRandomTipFromCategory('tech');
+    } else if (hour >= 18 && hour < 22) {
+      // 晚上
+      return this.getRandomTipFromCategory('life');
+    } else {
+      // 深夜
+      return {
+        text: "夜深了，早点休息，明天又是美好的一天！",
+        category: "温馨提醒"
+      };
+    }
+  },
+  
+  // 从指定分类获取随机提示
+  getRandomTipFromCategory: function(category) {
+    const categoryTips = this.tips[category] || this.tips.life;
+    const randomTip = categoryTips[Math.floor(Math.random() * categoryTips.length)];
+    return {
+      text: randomTip,
+      category: this.getCategoryDisplayName(category)
+    };
+  }
+};
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    if (document.querySelector('.dynamic-tip-card')) {
+      window.DynamicCard.init();
+    }
+  }, 1000);
+});
+
+// PJAX 支持
+if (typeof window.addEventListener !== 'undefined') {
+  window.addEventListener('pjax:complete', function() {
+    setTimeout(() => {
+      if (document.querySelector('.dynamic-tip-card')) {
+        window.DynamicCard.init();
+      }
+    }, 1000);
+  });
+} var canvasEl = document.createElement('canvas');
 canvasEl.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:9999999';
 document.body.appendChild(canvasEl);
 
