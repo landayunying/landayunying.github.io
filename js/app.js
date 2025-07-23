@@ -2280,7 +2280,7 @@ const siteRefresh = function (reload) {
   tabFormat()
 
   toolPlayer.player.load(LOCAL.audio || CONFIG.audio || {})
-  
+
   // 自动播放音乐
   setTimeout(function() {
     if(toolPlayer.player && toolPlayer.player.fetch) {
